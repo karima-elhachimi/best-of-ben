@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meme-achtergrond" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-2F-24X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="achtergrond4" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-2F-24X">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -38,7 +38,7 @@
                                     <action selector="quoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSM-WF-Fl4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="608-Gy-tKh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="608-Gy-tKh">
                                 <rect key="frame" x="24" y="113" width="335" height="447"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -57,6 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageAchtergrond" destination="Tze-2F-24X" id="t33-RH-Q9e"/>
                         <outlet property="lblQuote" destination="608-Gy-tKh" id="pLq-th-Xm8"/>
                     </connections>
                 </viewController>
@@ -66,7 +67,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="achtergrond4" width="250" height="250"/>
         <image name="ben gezicht" width="72" height="100"/>
-        <image name="meme-achtergrond" width="512" height="512"/>
     </resources>
 </document>
