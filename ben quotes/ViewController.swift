@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblQuote: UILabel!
     
     var rdmIndex : Int = 0;
+    
     let benQuotes = ["Ik denk dat ik echt wel epic ben.",
                      "Sorry, door de pet kan je mijn wenkbrauwen niet goed zien!",
                      "Ik heb al 8 uur luistertijd op mijn radio.",
@@ -21,16 +22,20 @@ class ViewController: UIViewController {
                      "Alles voor vleesmolens, toch?"];
     
     func generateQuote() {
-        
+        genRdmIndex()
+        lblQuote.text = benQuotes[rdmIndex];
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        genRdmIndex()
         
     }
 
+    func genRdmIndex() {
+        rdmIndex = Int(arc4random_uniform(UInt32(benQuotes.count)));
+    }
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +43,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func quoteButtonPressed(_ sender: UIButton) {
+        generateQuote()
     }
 
 
